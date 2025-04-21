@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 2</title>
+    </head>
+    <body>
+        <form action="task3_form.html" method="post">
+            <!-- name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <!-- email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <!-- age -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+            <!-- password -->
+            <label for="password">Password:</label>
+            <input type = "password" id="password" name="password" required><br><br>
+           
+            <br><br>
+            <!-- radio button -->
+            <input type="radio" id="html" name="format" value="html" checked>
+            <label for="html">HTML</label><br>
+            <input type="radio" id="pdf" name="format" value="pdf">
+            <label for="pdf">PDF</label><br>
+            <br><br>
+
+            <!-- checkbox -->
+            <input type="checkbox" id="v1" name="v1" value="option1" checked>
+            <label for="v1">Option 1</label><br>
+            <input type="checkbox" id="v2" name="v2" value="option2">
+            <label for="v2">Option 2</label><br>
+
+            <!-- select , dropdown -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <!-- multiple select -->
+            <label for="languages">Languages:</label>
+            <select id="languages" name="languages" multiple>
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <!-- number range -->
+            <label for="range">Choose a number:</label>
+            <input type="range" id="range" name="range" min="1" max="100"><br><br>
+
+            <!-- search -->
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search"><br><br>
+
+            <!-- tel -->
+            <label for="tel">Phone:</label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+
+            <!-- url -->
+            <label for="url">Website:</label>
+            <input type="url" id="url" name="url" pattern="https?://.+" required><br><br>
+            
+
+            <!-- text area -->
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+            <!-- file -->
+            <label for="file">Upload a file:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <!-- color -->
+            <label for="color">Choose a color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <!-- date  -->
+            <label for="date">Choose a date:</label>
+            <input type="date" id="date" name="date" max=""><br><br>
+
+            <!-- time  -->
+            <label for="time">Choose a time:</label>
+            <input type="time" id="time" name="time"><br><br>
+
+            <!-- date and time -->
+            <label for="dt">Date and time</label>
+            <input type="datetime-local" id="dt" name="dt"><br><br>
+
+            <!-- month  -->
+            <label for="month">Choose a month:</label>
+            <input type="month" id="month" name="month"><br><br>
+
+            <!-- week -->
+            <label for="week">Choose a week:</label>
+            <input type="week" id="week" name="week"><br><br>
+
+            <!-- image -->
+            <label for="image">Upload an image:</label>
+            <input type="image" id="image" name="image" src="path/to/image.jpg" alt="Image"><br><br>
+
+            <label for="custid">Customer Id</label>
+            <input ype="hidden" id="custid" name="custid" value="12345" maxlength="5"><br><br>
+
+
+            <label for="number">Choose a number:</label>
+            <input type="number" id="number" name="number" min="1" max="10"><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </form>
+    </body>
+</html>
