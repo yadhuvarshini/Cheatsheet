@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 5: Email with validation</title>
+    </head>
+<body>
+    <h1>Task 5: email and password</h1>
+    <form id="Email_pwd_form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email"  ><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password" maxlength= "288" minlength="6"><br><br>
+
+        <input type="submit" value="Submit" id="submitBtn"  disabled>
+    </fieldset>
+
+</body>
+
+<script>
+    window.onload = function() {
+        const form = document.getElementById('Email_pwd_form');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const submitButton = document.getElementById('submitBtn');        
+        
+        function validateForm() {
+            if (email.checkValidity() && password.checkValidity()) {
+                submitButton.removeAttribute('disabled');
+            } else {
+                submitButton.setAttribute('disabled','true');
+            }
+        }
+
+        email.addEventListener('input', validateForm);
+        password.addEventListener('input', validateForm);
+
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission for demonstration purposes
+            alert('Form submitted successfully!', email.value + ' ' + password.value);
+        });
+    };
+    </script>
+    
+</html>
