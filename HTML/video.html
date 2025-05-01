@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    
+</head>
+
+<body> 
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <!-- <p style="background-color: aqua; border-radius: 1px solid black; border: double;" id="mute" value="mute" onclick = "Muted()"></p> -->
+  <!-- <button onclick="myVideo.muted = !myVideo.muted">Mute</button> -->
+  <button id = "mutebtn" onclick="Muted()"></button>
+
+  
+  <br><br>
+  <video id="video1" width="420" >
+
+    <source  src="./assets/video/videoplayback.mp44" type="video/mp4"> 
+
+    <source  src="./assets/video/videoplayback.webmm" type="video/webm">
+
+   
+
+  </video>
+</div> 
+
+<script> 
+
+var myVideo = document.getElementById("video1");    
+var muted = document.getElementById("mutebtn");
+
+myVideo.addEventListener("loadedmetadata", function(){
+    const src = myVideo.currentSrc;
+    const isWebm = src.endsWith(".webm");
+    
+    if (isWebm) {
+        muted.setAttribute("disabled", "true");
+    }
+    
+})
+
+muted.innerHTML = "Mute";
+myVideo.muted = false;
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+
+function Muted() {
+    if (myVideo.muted) {
+        myVideo.muted = false;
+        muted.innerHTML = "Mute";
+    } else {
+        myVideo.muted = true;
+        muted.innerHTML = "Unmute";
+    }
+}
+
+myVideo.addEventListener("error", function(event) {
+    if (event.target.error.code == MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {
+        alert("Video not supported");
+    }
+}, false);
+
+</script> 
+
+
+</body> 
+</html>
+
