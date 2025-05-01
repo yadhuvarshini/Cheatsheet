@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #1a1a1a;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader {
+      border: 2px solid #f3f3f3;
+      border-top: 2px solid #3498db;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+</head>
+<body>
+    <h2>HTML noscript Tag</h2>
+    <p>The <code>&lt;noscript&gt;</code> tag defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script.</p>
+    <div id="jsEnabled"></div>
+    <script>
+        // JS normally loads content here
+        var jsEnabled = document.getElementById('jsEnabled');
+        jsEnabled.innerHTML += "<h1>Welcome, JavaScript is enabled!</h1>";
+      </script>
+    <!-- noscript tag starts -->
+    <noscript>
+        <h1>JavaScript is disabled in your browser.</h1>
+        <br>
+        <div class="loader"></div>
+    </noscript>
+    <!-- noscript tag ends -->
+
+</body>
+
+</html>
