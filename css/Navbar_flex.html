@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Flex</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Cambria;
+            background-color: #f4f4f4;
+        }
+
+        .navbar{
+            display: flex;
+            background-color: #333;
+            padding: 10px 20px;
+            gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .logo{
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links{
+            display: flex;
+            margin-left: auto;
+            gap: 20px;
+        }
+        
+        .menu-toggle{
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle .bar{
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width:768px){
+            .nav-links {
+                display: none;
+                flex-direction:column;
+                background-color: #333;
+                position: absolute;
+                top: 40px;
+                right: 0;
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+                margin-left: auto;
+            }
+        }
+        
+        .nav-links a{
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s linear;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">MyLogo</div>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+    </header>
+    
+</body>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script> 
+
+</html>
