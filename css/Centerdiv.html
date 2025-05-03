@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center a Div</title>
+
+    <style>
+
+        
+        body{
+            font-family: Cambria;
+            background-color: #f4f4f4;
+        }
+
+        .container-1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+
+        .centered-div{
+            
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+
+        .container-2 {
+            display: grid;
+            justify-content:center;
+            place-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Center a Div</h1>
+    <br>
+    
+    <div class="container-1">
+        <h1>Using Flex</h1>
+       <div class="centered-div"></div>
+       display : flex will work on parent div and child div will be centered in the parent div.
+    </div>
+
+    <br>
+    <div class="container-2">
+        <h1>Using Grid</h1>
+       <div class="centered-div"></div>
+       display : grid will work on parent div and child div will be centered in the parent div.
+    </div>
+</body>
+</html>
