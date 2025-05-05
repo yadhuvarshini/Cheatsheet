@@ -26,14 +26,30 @@
             height: 100px;
             width: 100px;
             background-color: black;
+            margin: 10px;
+        
         }
 
         .container-2 {
             display: grid;
-            justify-content:center;
+            justify-content: center;
             place-items: center;
+            grid-template-columns: repeat(1, 1fr) minmax(100px, 1fr);
+        } 
+
+        .container-3{
+            position: absolute;
         }
 
+        .centered-div-1{
+            position: absolute;
+            top: 150%;
+            left: 150%;
+            transform: translate(-50%, -50%);
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
 
     </style>
 </head>
@@ -49,9 +65,16 @@
 
     <br>
     <div class="container-2">
-        <h1>Using Grid</h1>
+        
        <div class="centered-div"></div>
-       display : grid will work on parent div and child div will be centered in the parent div.
+       <div class="centered-div"></div>
+       <div class="centered-div"></div>
+       <div class="centered-div"></div>
+       <div class="centered-div"></div>
+       <div class="centered-div"></div>
     </div>
+
+   
+
 </body>
 </html>

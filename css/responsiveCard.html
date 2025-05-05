@@ -93,8 +93,28 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin: 5% auto;
-            max-width: fit-content;
+            margin: 2rem auto;  /*This snippet is part of a CSS rule that defines the **`margin`** property for an HTML element. Here's what it does:
+
+### Breakdown:
+- **`margin`**: This property sets the space outside the element's border, effectively creating space between the element and its neighboring elements.
+- **`2rem auto`**: This shorthand specifies the top/bottom and left/right margins:
+  - **`2rem`**: The top and bottom margins are set to `2rem`. A `rem` unit is relative to the root element's font size (usually `16px` by default in most browsers). So, `2rem` equals `32px` if the root font size is `16px`.
+  - **`auto`**: The left and right margins are automatically calculated by the browser. This is commonly used to center an element horizontally within its container.
+
+### Use Case:
+This combination is often used to center block-level elements (like a card or a div) horizontally on the page while maintaining consistent vertical spacing.
+
+### Example:
+```html
+<div style="margin: 2rem auto; width: 50%; background-color: lightgray;">
+  Centered Card
+</div>
+```
+
+In this example:
+- The card will have `32px` of space above and below it.
+- It will be horizontally centered within its parent container.*/
+            max-width: fit-content;  /* responsive */
             text-align: center;
         }
 
